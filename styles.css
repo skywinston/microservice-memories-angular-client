@@ -68,7 +68,7 @@ label {
   width: 320px; }
 
 .drawer {
-  position: fixed;
+  position: absolute;
   padding: 24px;
   box-sizing: border-box;
   top: 0;
@@ -79,11 +79,6 @@ label {
   background-color: #fafafa;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   z-index: 900; }
-
-.inner {
-  position: absolute;
-  min-height: 100%;
-  y-overflow: auto; }
 
 .appnav {
   display: flex;
