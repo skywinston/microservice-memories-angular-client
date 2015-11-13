@@ -34,9 +34,8 @@
     </div>
   </div>
   <div class="drawer flex-col">
-    <div class="flex-col inner">
-      <h1>Choose a year</h1>
-      <h3 class="yearlink" ng-repeat="year in years track by $index" ng-click="yearLookup(year)">{{year}}</h3>
-    </div>
+    <h1>Choose a year</h1>
+    <h3 class="yearlink" ng-click="getMemories()">All Years</h3>
+    <h3 class="yearlink" ng-repeat="year in years track by $index" ng-click="yearLookup(year)">{{year}}</h3>
   </div>
 </div>

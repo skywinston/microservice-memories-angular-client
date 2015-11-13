@@ -238,7 +238,8 @@ select {
   margin-top: 24px; }
 
 .yearlink {
-  color: #03a9f4; }
+  color: #03a9f4;
+  cursor: pointer; }
 
 .animated {
   -webkit-animation-duration: .4s;
