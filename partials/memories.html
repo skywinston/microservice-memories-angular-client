@@ -1,0 +1,42 @@
+<div class="navbar">
+
+</div>
+<div class="row">
+  <div class="flex-col memories">
+    <div class="newMemory">
+      <form class="addMemory" ng-submit="addMemory()">
+        <h1>Add a new memory</h1>
+        <label for="old_days">Back then...</label>
+        <input id="old_days" ng-model='newMemory.data.attributes.old_days'>
+        <label for="these_days">But now...</label>
+        <input id="these_days" ng-model='newMemory.data.attributes.these_days'>
+        <label for="year">Year</label>
+        <input id="year" ng-model='newMemory.data.attributes.year'>
+        <button class="btn btn-primary" type="submit" name="button">Add Memory</button>
+      </form>
+    </div>
+    <div class="flex-col pamphlet" ng-repeat='memory in memories'>
+      <h1>{{memory.attributes.year}}</h1>
+      <div class="flex-row">
+        <div class="flex-col block">
+          <h3>Back then...</h3>
+          <p>
+            {{memory.attributes.old_days}}
+          </p>
+        </div>
+        <div class="flex-col block">
+          <h3>But now...</h3>
+          <p>
+            {{memory.attributes.these_days}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="drawer flex-col">
+    <div class="flex-col inner">
+      <h1>Choose a year</h1>
+      <h3 class="yearlink" ng-repeat="year in years track by $index" ng-click="yearLookup(year)">{{year}}</h3>
+    </div>
+  </div>
+</div>
